@@ -5,8 +5,23 @@ import MonitoringView from './views/MonitoringView';
 import { INDICATORS } from './constants';
 
 const App: React.FC = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(true);
-  const [activeView, setActiveView] = useState('monitoring');
+  const [sidebarOpen, setSidebarOpen] = React.useState(() => {
+    const saved = localStorage.getItem('sidebarOpen');
+    return saved !== null ? JSON.parse(saved) : true;
+  });
+
+  const [activeView, setActiveView] = React.useState(() => {
+    const saved = localStorage.getItem('activeView');
+    return saved !== null ? saved : 'monitoring';
+  });
+
+  React.useEffect(() => {
+    localStorage.setItem('sidebarOpen', JSON.stringify(sidebarOpen));
+  }, [sidebarOpen]);
+
+  React.useEffect(() => {
+    localStorage.setItem('activeView', activeView);
+  }, [activeView]);
 
   const currentIndicator = INDICATORS.find(ind => ind.id === activeView) || INDICATORS[0];
 
