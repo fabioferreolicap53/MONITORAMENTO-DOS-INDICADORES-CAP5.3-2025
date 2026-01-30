@@ -29,6 +29,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen, activeView, setAct
         { id: 'indicator-1.5', label: '1.5 - PROPORÇÃO DE CRIANÇAS ENTRE 12 E 24 MESES COM PELO MENOS 1 REGISTRO PARAMETRIZADO DE AVALIAÇÃO DO DESENVOLVIMENTO PSICOMOTOR AOS 24 MESES DE VIDA', number: '1.5' },
         { id: 'modal', label: 'MODAL', number: 'M' },
         { id: 'indicator-3.5', label: '3.5 - PROPORÇÃO DE PESSOAS COM HIPERTENSÃO, QUE TIVERAM CONSULTA E PRESSÃO ARTERIAL AFERIDA NO SEMESTRE', number: '3.5' },
+        { id: 'indicator-3.10', label: '3.10 - PERCENTUAL DE MULHERES ENTRE 25 E 64 ANOS COM COLPOCITOLÓGICO REGISTRADO NOS 3 ANOS', number: '3.10' },
         { id: 'indicator-1.7', label: '1.7 - PERCENTUAL DE CRIANÇAS COM 7 OU MAIS CONSULTAS DE PUERICULTURA REALIZADAS NO PRIMEIRO ANO DE VIDA', number: '1.7' },
         { id: 'indicator-1.12', label: '1.12 - PERCENTUAL DE GESTANTES COM PELO MENOS 7 CONSULTAS PRÉ-NATAL (PN) REALIZADAS, SENDO A 1ª ATÉ A 12ª SEMANA DE GESTAÇÃO', number: '1.12' },
         { id: 'indicator-3.2', label: '3.2 - PROPORÇÃO DE PESSOAS COM DIABETES, COM HBA1C < OU = 8% NOS ÚLTIMOS 6 MESES', number: '3.2' },

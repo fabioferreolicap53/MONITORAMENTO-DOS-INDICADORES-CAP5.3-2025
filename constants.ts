@@ -189,6 +189,35 @@ const DATA_3_5: UnitData[] = [
   { id: 25, name: 'SAVIO', isPinned: false, values: [39.98, 41.79, 41.79, 43.23, 41.91, 43.04, 43.71, 45.69, 49.18, 50.63, 53.88, 54.22] }
 ];
 
+const DATA_3_10: UnitData[] = [
+  { id: 0, name: 'CAP5.3', isPinned: true, values: [45.18, 45.62, 45.36, 45.02, 46.33, 46.57, 46.91, 46.71, 46.54, 46.15, 46.03, 46.27] },
+  { id: 1, name: 'ALICE', isPinned: false, values: [49.54, 49.76, 49.24, 48.84, 51.12, 51.86, 52.05, 51.36, 51.10, 49.79, 49.10, 49.15] },
+  { id: 2, name: 'DEOLINDO', isPinned: false, values: [38.35, 39.09, 38.74, 38.26, 40.25, 41.07, 43.51, 44.25, 44.53, 43.72, 42.24, 43.04] },
+  { id: 3, name: 'EDSON', isPinned: false, values: [55.18, 55.73, 55.67, 55.51, 57.90, 58.35, 58.70, 58.62, 57.16, 56.09, 56.17, 56.52] },
+  { id: 4, name: 'ERNANI', isPinned: false, values: [37.09, 37.19, 36.97, 36.54, 38.67, 38.89, 38.79, 38.64, 38.72, 37.62, 37.36, 37.94] },
+  { id: 5, name: 'HELANDE', isPinned: false, values: [48.54, 48.64, 48.34, 47.58, 51.17, 51.99, 52.42, 52.35, 52.50, 51.09, 50.33, 50.67] },
+  { id: 6, name: 'ILZO', isPinned: false, values: [50.44, 51.68, 52.00, 51.95, 53.14, 53.32, 53.58, 53.17, 53.56, 53.10, 52.69, 52.56] },
+  { id: 7, name: 'JAMIL', isPinned: false, values: [46.47, 46.96, 46.98, 46.61, 46.71, 46.56, 47.63, 47.22, 46.71, 46.77, 47.17, 47.19] },
+  { id: 8, name: 'JBC', isPinned: false, values: [38.39, 38.28, 37.66, 37.08, 39.76, 39.58, 39.37, 38.82, 38.77, 38.11, 38.00, 38.62] },
+  { id: 9, name: 'CIRAUDO', isPinned: false, values: [36.39, 36.95, 36.76, 36.54, 38.20, 38.63, 39.02, 38.85, 39.16, 39.31, 39.21, 39.42] },
+  { id: 10, name: 'LENICE', isPinned: false, values: [36.17, 36.24, 35.80, 35.36, 40.12, 40.16, 40.02, 39.24, 39.03, 37.76, 36.84, 36.40] },
+  { id: 11, name: 'LOURENCO', isPinned: false, values: [44.18, 44.14, 44.23, 43.77, 44.21, 45.70, 45.41, 46.03, 46.36, 46.43, 46.02, 46.36] },
+  { id: 12, name: 'SAMUEL', isPinned: false, values: [53.83, 55.32, 55.22, 55.65, 56.02, 56.04, 56.54, 56.66, 52.29, 53.40, 54.72, 54.99] },
+  { id: 13, name: 'SERGIO AROUCA', isPinned: false, values: [46.78, 47.54, 47.41, 46.94, 45.31, 45.92, 47.04, 47.57, 48.02, 48.14, 48.11, 48.17] },
+  { id: 14, name: 'VALERIA', isPinned: false, values: [49.10, 49.39, 49.32, 49.28, 49.40, 50.19, 50.38, 50.67, 50.30, 48.97, 48.84, 49.06] },
+  { id: 15, name: 'WALDEMAR', isPinned: false, values: [42.56, 43.05, 42.79, 42.27, 42.91, 42.89, 43.39, 43.48, 43.40, 44.03, 45.37, 46.06] },
+  { id: 16, name: 'ADELINO', isPinned: false, values: [44.95, 45.00, 44.37, 43.89, 46.68, 46.63, 46.25, 45.72, 45.39, 45.97, 46.11, 45.34] },
+  { id: 17, name: 'ALOYSIO', isPinned: false, values: [43.09, 43.64, 42.98, 43.08, 44.21, 44.34, 45.18, 46.43, 46.46, 46.82, 45.22, 45.75] },
+  { id: 18, name: 'CATTAPRETA', isPinned: false, values: [51.12, 50.90, 50.81, 50.63, 51.17, 51.36, 51.65, 51.77, 52.00, 51.56, 52.11, 52.15] },
+  { id: 19, name: 'CESARIO', isPinned: false, values: [48.05, 48.88, 48.33, 48.04, 49.10, 49.34, 49.73, 49.23, 48.59, 47.90, 47.40, 46.68] },
+  { id: 20, name: 'CYRO', isPinned: false, values: [55.03, 56.73, 56.68, 57.16, 58.50, 58.46, 58.05, 57.65, 57.52, 56.88, 56.50, 56.17] },
+  { id: 21, name: 'DECIO', isPinned: false, values: [45.63, 45.78, 45.22, 44.69, 44.05, 44.03, 44.19, 43.84, 44.02, 43.86, 44.11, 44.29] },
+  { id: 22, name: 'EMYDIO', isPinned: false, values: [55.72, 56.39, 56.25, 55.66, 56.37, 56.54, 56.21, 54.69, 54.39, 53.88, 53.67, 54.12] },
+  { id: 23, name: 'FLORIPES', isPinned: false, values: [45.15, 45.73, 46.11, 46.25, 47.35, 47.49, 47.88, 47.13, 47.40, 46.78, 46.71, 48.09] },
+  { id: 24, name: 'MARIA APARECIDA', isPinned: false, values: [44.88, 45.04, 44.73, 44.51, 44.72, 44.44, 45.22, 45.21, 45.44, 47.26, 46.95, 46.64] },
+  { id: 25, name: 'SAVIO', isPinned: false, values: [53.51, 53.53, 53.15, 52.51, 54.12, 53.62, 53.81, 53.88, 54.20, 53.72, 53.63, 53.75] }
+];
+
 export const INDICATORS: Indicator[] = [
   {
     id: 'monitoring',
@@ -246,6 +275,16 @@ export const INDICATORS: Indicator[] = [
     fonte: 'PEP',
     criterio: 'Média aritmética simples dos resultados mensais acumulados no ano de 2025 (Janeiro a Dezembro de 2025).',
     data: DATA_1_5
+  },
+  {
+    id: 'indicator-3.10',
+    number: '3.10',
+    label: '3.10 - PERCENTUAL DE MULHERES ENTRE 25 E 64 ANOS COM COLPOCITOLÓGICO REGISTRADO NOS 3 ANOS',
+    periodicidade: 'MENSAL',
+    meta: '80,00%',
+    fonte: 'PEP - V2',
+    criterio: 'Média aritmética simples dos resultados mensais acumulados no ano de 2025 (Janeiro a Dezembro de 2025).',
+    data: DATA_3_10
   },
   {
     id: 'indicator-3.5',
