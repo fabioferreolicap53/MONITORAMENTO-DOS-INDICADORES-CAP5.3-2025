@@ -37,11 +37,11 @@ const App: React.FC = () => {
 
       {/* Main Content Area */}
       <div
-        className={`flex-1 transition-all duration-300 ease-in-out flex flex-col min-w-0 h-screen overflow-hidden ${sidebarOpen ? 'pl-60' : 'pl-14'}`}
+        className={`flex-1 transition-all duration-300 ease-in-out flex flex-col min-w-0 h-screen overflow-hidden ${sidebarOpen ? 'md:pl-60 pl-14' : 'pl-14'}`}
       >
         <Header indicator={currentIndicator} />
 
-        <main className="w-full mx-auto p-3 md:p-4 pb-0 flex-1 min-h-0">
+        <main className="w-full mx-auto p-2 sm:p-3 md:p-4 pb-0 flex-1 min-h-0">
           <MonitoringView indicator={currentIndicator} />
         </main>
 

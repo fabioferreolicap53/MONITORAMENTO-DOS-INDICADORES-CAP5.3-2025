@@ -43,12 +43,13 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen, activeView, setAct
 
     return (
         <aside
-            onMouseEnter={() => !isOpen && setIsHovered(true)}
+            onMouseEnter={() => !isOpen && window.innerWidth >= 768 && setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             className={`
                 fixed left-0 top-0 h-screen bg-primary text-blue-100 transition-all duration-300 ease-in-out z-[100]
-                ${isExpanded ? 'w-60' : 'w-14'}
+                ${isExpanded && (isOpen || window.innerWidth >= 768) ? 'w-60' : 'w-14'}
                 border-r border-white/10 shadow-[4px_0_24px_rgba(0,0,0,0.15)]
+                flex flex-col
             `}
         >
             {/* Sidebar Header / Logo */}
@@ -88,7 +89,10 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen, activeView, setAct
             </div>
 
             {/* Navigation Items */}
-            <nav className="p-2 space-y-1 flex-1 overflow-y-auto custom-scrollbar">
+            <nav className="p-2 space-y-1 flex-1 overflow-y-auto min-h-0" style={{
+                scrollbarWidth: 'thin',
+                scrollbarColor: 'rgba(255, 255, 255, 0.3) transparent'
+            }}>
                 {filteredItems.map((item) => {
                     const isActive = activeView === item.id;
 
@@ -145,7 +149,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen, activeView, setAct
             </button>
 
             {/* Footer / User Profile */}
-            <div className={`absolute bottom-0 left-0 w-full p-2 border-t border-white/10 overflow-hidden bg-white/5 transition-all duration-300 ${isExpanded ? 'h-auto' : 'h-20'}`}>
+            <div className={`shrink-0 w-full p-2 border-t border-white/10 overflow-hidden bg-white/5 transition-all duration-300`}>
                 <div className={`flex items-center gap-2 ${!isExpanded && 'justify-center h-full'}`}>
                     <div className="w-9 h-9 rounded-full bg-white/10 shrink-0 border-2 border-white/20 flex flex-col items-center justify-center font-black text-white leading-none shadow-inner group-hover:bg-white/20 transition-colors">
                         <span className="text-[8px]">CAP</span>
