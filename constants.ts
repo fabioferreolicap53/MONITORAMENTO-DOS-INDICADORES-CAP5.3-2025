@@ -160,6 +160,35 @@ const DATA_3_3: UnitData[] = [
   { id: 25, name: 'SAVIO', isPinned: false, values: [18.35, 17.31, 16.94, 12.70, 15.24, 11.37, 15.38, 24.08, 35.95, 38.36, 39.49, 43.73] }
 ];
 
+const DATA_3_5: UnitData[] = [
+  { id: 0, name: 'CAP5.3', isPinned: true, values: [52.09, 49.61, 49.61, 49.31, 49.02, 49.02, 52.32, 52.49, 52.49, 54.94, 55.02, 55.08] },
+  { id: 1, name: 'ALICE', isPinned: false, values: [44.19, 42.47, 42.47, 41.72, 43.68, 48.15, 47.04, 46.82, 47.28, 47.28, 47.28, 45.16] },
+  { id: 2, name: 'DEOLINDO', isPinned: false, values: [54.88, 39.04, 39.04, 47.57, 46.55, 34.33, 49.16, 39.26, 41.26, 41.26, 57.47, 60.98] },
+  { id: 3, name: 'EDSON', isPinned: false, values: [56.31, 57.64, 57.64, 57.28, 59.78, 61.66, 52.71, 62.26, 62.26, 62.26, 64.13, 61.65] },
+  { id: 4, name: 'ERNANI', isPinned: false, values: [51.08, 53.27, 53.27, 53.35, 49.47, 53.41, 50.10, 48.88, 50.24, 50.24, 50.87, 51.08] },
+  { id: 5, name: 'HELANDE', isPinned: false, values: [69.21, 58.05, 58.05, 55.98, 55.95, 56.96, 56.62, 58.69, 64.52, 64.52, 67.71, 65.03] },
+  { id: 6, name: 'ILZO', isPinned: false, values: [47.37, 54.67, 54.67, 50.98, 50.98, 50.98, 53.33, 54.67, 54.67, 54.67, 57.14, 57.14] },
+  { id: 7, name: 'JAMIL', isPinned: false, values: [41.01, 42.39, 42.39, 40.80, 40.14, 41.13, 42.03, 41.33, 40.80, 40.80, 42.03, 41.68] },
+  { id: 8, name: 'JBC', isPinned: false, values: [46.46, 45.39, 45.39, 45.33, 45.55, 51.57, 51.18, 51.19, 49.58, 49.58, 49.78, 45.14] },
+  { id: 9, name: 'CIRAUDO', isPinned: false, values: [50.34, 48.07, 48.07, 47.45, 46.81, 48.01, 50.35, 52.21, 52.98, 52.98, 55.24, 53.45] },
+  { id: 10, name: 'LENICE', isPinned: false, values: [28.26, 49.28, 49.28, 48.90, 51.61, 54.05, 55.56, 54.82, 61.19, 61.19, 62.15, 60.95] },
+  { id: 11, name: 'LOURENCO', isPinned: false, values: [42.91, 35.08, 35.08, 31.74, 37.82, 47.69, 47.74, 49.84, 52.41, 52.41, 55.48, 50.01] },
+  { id: 12, name: 'SAMUEL', isPinned: false, values: [41.24, 45.84, 45.84, 50.15, 47.47, 46.60, 51.51, 59.64, 56.01, 56.01, 60.05, 55.36] },
+  { id: 13, name: 'SERGIO AROUCA', isPinned: false, values: [42.86, 40.08, 40.08, 41.12, 40.53, 41.82, 42.12, 43.15, 43.15, 43.15, 44.62, 44.62] },
+  { id: 14, name: 'VALERIA', isPinned: false, values: [35.90, 52.83, 52.83, 51.34, 51.82, 51.14, 54.92, 50.88, 56.31, 56.31, 55.84, 55.48] },
+  { id: 15, name: 'WALDEMAR', isPinned: false, values: [48.26, 48.82, 48.82, 46.84, 46.04, 49.67, 52.25, 53.29, 53.09, 53.09, 53.95, 55.33] },
+  { id: 16, name: 'ADELINO', isPinned: false, values: [50.08, 49.68, 49.68, 48.87, 49.84, 51.52, 52.47, 54.57, 56.97, 56.97, 59.38, 58.40] },
+  { id: 17, name: 'ALOYSIO', isPinned: false, values: [63.08, 60.61, 60.61, 60.98, 80.72, 67.07, 71.21, 71.31, 74.47, 74.47, 76.24, 72.35] },
+  { id: 18, name: 'CATTAPRETA', isPinned: false, values: [52.15, 60.23, 60.23, 48.97, 47.95, 49.25, 49.42, 50.00, 52.62, 52.62, 54.11, 56.03] },
+  { id: 19, name: 'CESARIO', isPinned: false, values: [54.81, 46.08, 46.08, 46.78, 48.23, 48.71, 51.97, 53.61, 57.28, 57.28, 58.40, 58.21] },
+  { id: 20, name: 'CYRO', isPinned: false, values: [53.85, 45.45, 45.45, 45.45, 45.45, 45.45, 51.35, 51.35, 51.35, 51.35, 51.35, 51.35] },
+  { id: 21, name: 'DECIO', isPinned: false, values: [50.07, 45.83, 45.83, 44.95, 54.20, 46.16, 50.24, 51.33, 51.68, 51.68, 54.58, 54.64] },
+  { id: 22, name: 'EMYDIO', isPinned: false, values: [48.61, 50.81, 50.81, 50.79, 52.80, 51.54, 54.90, 52.53, 51.51, 51.51, 52.65, 49.29] },
+  { id: 23, name: 'FLORIPES', isPinned: false, values: [59.13, 57.47, 57.47, 54.46, 68.16, 69.79, 71.11, 71.51, 75.33, 75.33, 72.42, 65.31] },
+  { id: 24, name: 'MARIA APARECIDA', isPinned: false, values: [45.97, 43.16, 43.16, 74.83, 44.57, 66.46, 57.76, 56.68, 58.49, 58.49, 60.17, 63.77] },
+  { id: 25, name: 'SAVIO', isPinned: false, values: [38.98, 41.79, 41.79, 41.23, 41.91, 45.04, 45.71, 45.89, 49.14, 49.14, 50.65, 53.06] }
+];
+
 export const INDICATORS: Indicator[] = [
   {
     id: 'monitoring',
@@ -217,6 +246,16 @@ export const INDICATORS: Indicator[] = [
     fonte: 'PEP',
     criterio: 'Média aritmética simples dos resultados mensais acumulados no ano de 2025 (Janeiro a Dezembro de 2025).',
     data: DATA_1_5
+  },
+  {
+    id: 'indicator-3.5',
+    number: '3.5',
+    label: '3.5 - PROPORÇÃO DE PESSOAS COM HIPERTENSÃO, QUE TIVERAM CONSULTA E PRESSÃO ARTERIAL AFERIDA NO SEMESTRE',
+    periodicidade: 'MENSAL',
+    meta: '80,00%',
+    fonte: 'PEP',
+    criterio: 'Média aritmética simples dos resultados mensais acumulados no ano de 2025 (Janeiro a Dezembro de 2025).',
+    data: DATA_3_5
   },
   {
     id: 'indicator-1.7',
