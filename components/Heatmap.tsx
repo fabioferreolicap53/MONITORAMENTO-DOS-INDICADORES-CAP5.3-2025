@@ -37,22 +37,25 @@ const Heatmap: React.FC<HeatmapProps> = ({ data }) => {
   };
   return (
     <section id="heatmap-section" className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col h-full">
-      <div className="p-3 border-b border-slate-200 flex flex-col sm:flex-row justify-between items-center gap-3 bg-gradient-to-r from-slate-50 to-white">
-        <h2 className="font-black flex items-center gap-2 text-slate-800">
-          <Grid size={24} className="text-primary" />
-          <span className="text-xl tracking-tight uppercase tracking-tight">MAPA DE CALOR DE DESEMPENHO 2025 (TODAS AS UNIDADES)</span>
+      <div className="p-2 sm:p-3 border-b border-slate-200 flex flex-col gap-2 bg-gradient-to-r from-slate-50 to-white">
+        <h2 className="font-black flex items-center gap-1.5 sm:gap-2 text-slate-800">
+          <Grid size={18} className="text-primary shrink-0 sm:w-6 sm:h-6" />
+          <span className="text-[11px] sm:text-sm md:text-base lg:text-xl tracking-tight uppercase leading-tight">
+            <span className="hidden md:inline">MAPA DE CALOR DE DESEMPENHO 2025 (TODAS AS UNIDADES)</span>
+            <span className="md:hidden">MAPA DE CALOR DE DESEMPENHO 2025</span>
+          </span>
         </h2>
-        <div className="flex items-center gap-4 text-xs font-medium text-slate-600">
-          <div className="flex items-center gap-1.5">
-            <div className="w-2.5 h-2.5 rounded-full bg-red-500"></div>
+        <div className="flex items-center gap-2 sm:gap-3 md:gap-4 text-[9px] sm:text-[10px] md:text-xs font-medium text-slate-600 flex-wrap">
+          <div className="flex items-center gap-1">
+            <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-red-500"></div>
             <span>Baixo (&lt;50%)</span>
           </div>
-          <div className="flex items-center gap-1.5">
-            <div className="w-2.5 h-2.5 rounded-full bg-yellow-400"></div>
+          <div className="flex items-center gap-1">
+            <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-yellow-400"></div>
             <span>Médio (50-80%)</span>
           </div>
-          <div className="flex items-center gap-1.5">
-            <div className="w-2.5 h-2.5 rounded-full bg-green-500"></div>
+          <div className="flex items-center gap-1">
+            <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-green-500"></div>
             <span>Alto (&gt;80%)</span>
           </div>
         </div>
@@ -60,20 +63,21 @@ const Heatmap: React.FC<HeatmapProps> = ({ data }) => {
 
       <div className="relative flex-1 min-h-0 overflow-x-auto custom-scrollbar">
         <div className="h-full overflow-y-auto custom-scrollbar">
-          <table className="w-full text-left border-collapse table-fixed min-w-[1200px]">
+          <table className="w-full text-left border-collapse table-fixed min-w-[800px] md:min-w-[1200px]">
             <thead className="sticky top-0 z-30 shadow-sm">
-              <tr className="bg-primary text-[13px] font-black text-white uppercase tracking-wider">
-                <th className="p-3 border-r border-white/10 sticky left-0 bg-primary z-40 w-48 shadow-[2px_0_5px_-2px_rgba(0,0,0,0.1)]">
-                  № / Unidade
+              <tr className="bg-primary text-[10px] sm:text-xs md:text-[13px] font-black text-white uppercase tracking-wider">
+                <th className="p-1.5 sm:p-2 md:p-3 border-r border-white/10 sticky left-0 bg-primary z-40 w-32 sm:w-40 md:w-48 shadow-[2px_0_5px_-2px_rgba(0,0,0,0.1)]">
+                  <span className="hidden sm:inline">№ / Unidade</span>
+                  <span className="sm:hidden">Unidade</span>
                 </th>
                 {MONTHS.map((month) => (
-                  <th key={month.short} className="p-3 text-center w-20 border-r border-white/10">
+                  <th key={month.short} className="p-1.5 sm:p-2 md:p-3 text-center w-14 sm:w-16 md:w-20 border-r border-white/10">
                     {month.short}
                   </th>
                 ))}
               </tr>
             </thead>
-            <tbody className="text-[13px] font-medium">
+            <tbody className="text-[10px] sm:text-xs md:text-[13px] font-medium">
               {data.map((unit, index) => (
                 <tr
                   key={unit.id}
@@ -84,7 +88,7 @@ const Heatmap: React.FC<HeatmapProps> = ({ data }) => {
                   `}
                 >
                   <td className={`
-                    p-3 border-r border-slate-300 sticky left-0 z-10 text-sm shadow-[2px_0_5px_-2px_rgba(0,0,0,0.1)]
+                    p-1.5 sm:p-2 md:p-3 border-r border-slate-300 sticky left-0 z-10 text-[10px] sm:text-xs md:text-sm shadow-[2px_0_5px_-2px_rgba(0,0,0,0.1)]
                     ${unit.isPinned ? 'bg-blue-50 text-primary font-black' : (selectedUnitId === unit.id ? 'bg-blue-50 text-primary font-black' : 'bg-white text-slate-800 font-bold')}
                   `}>
                     {/* Selected Indicator Bar */}
@@ -96,12 +100,12 @@ const Heatmap: React.FC<HeatmapProps> = ({ data }) => {
                       onClick={() => toggleHighlight(unit.id)}
                     >
                       <span className={`
-                        text-[10px] px-2 py-0.5 rounded font-bold transition-transform group-hover/unit:scale-110
+                        text-[8px] sm:text-[9px] md:text-[10px] px-1 sm:px-1.5 md:px-2 py-0.5 rounded font-bold transition-transform group-hover/unit:scale-110
                         ${unit.isPinned ? 'bg-primary text-white' : (selectedUnitId === unit.id ? 'bg-primary text-white' : 'bg-slate-200 text-slate-600')}
                       `}>
                         {unit.isPinned ? unit.id : index}
                       </span>
-                      <span className={`uppercase tracking-tight transition-colors ${selectedUnitId === unit.id ? 'text-primary font-black' : 'group-hover/unit:text-primary font-bold'}`}>
+                      <span className={`uppercase tracking-tight transition-colors truncate ${selectedUnitId === unit.id ? 'text-primary font-black' : 'group-hover/unit:text-primary font-bold'}`}>
                         {unit.name}
                       </span>
                       {unit.isPinned && <Star size={12} fill="currentColor" className="text-primary ml-auto" />}
@@ -118,8 +122,8 @@ const Heatmap: React.FC<HeatmapProps> = ({ data }) => {
                       <td
                         key={mIndex}
                         className={`
-                          p-2 text-center border-r border-white/50 transition-all duration-300 cursor-default
-                          ${selectedUnitId === unit.id ? 'ring-1 ring-primary min-w-[100px] bg-opacity-70 font-black text-sm' : 'hover:scale-105 hover:z-10 hover:shadow-lg'}
+                          p-1 sm:p-1.5 md:p-2 text-center border-r border-white/50 transition-all duration-300 cursor-default
+                          ${selectedUnitId === unit.id ? 'ring-1 ring-primary min-w-[60px] sm:min-w-[80px] md:min-w-[100px] bg-opacity-70 font-black text-xs sm:text-sm' : 'hover:scale-105 hover:z-10 hover:shadow-lg'}
                           ${colorClass}
                         `}
                       >
@@ -136,8 +140,9 @@ const Heatmap: React.FC<HeatmapProps> = ({ data }) => {
         </div>
       </div>
 
-      <div className="p-2 px-4 bg-slate-50 text-[10px] text-slate-400 italic flex justify-between border-t border-slate-100">
-        <span>* Use o scroll lateral para os meses e o vertical para percorrer todas as unidades.</span>
+      <div className="p-1.5 sm:p-2 px-2 sm:px-4 bg-slate-50 text-[8px] sm:text-[9px] md:text-[10px] text-slate-400 italic flex flex-col sm:flex-row justify-between gap-1 border-t border-slate-100">
+        <span className="hidden sm:inline">* Use o scroll lateral para os meses e o vertical para percorrer todas as unidades.</span>
+        <span className="sm:hidden">* Arraste para ver todos os dados</span>
         <span className="font-bold text-primary">CAP5.3 FIXO NO TOPO</span>
       </div>
     </section>
