@@ -9,18 +9,46 @@ interface RankingListProps {
 
 const RankingList: React.FC<RankingListProps> = ({ data, indicator }) => {
   // Dynamic slice based on periodicidade
-  const getRelevantSlice = (values: (number | null)[]) => {
-    const rawSlice = indicator.periodicidade === 'Semestral' ? values.slice(6, 12) : values.slice(0, 12);
-    return rawSlice.filter((v): v is number => v !== null);
+  const calculateMetrics = (u: UnitData) => {
+    const isSemestral = indicator.periodicidade === 'Semestral';
+    const isQuadrimestral = indicator.periodicidade === 'QUADRIMESTRAL';
+
+    let rawSlice: (number | null)[] = [];
+    if (isSemestral) {
+      rawSlice = u.values.slice(6, 12);
+    } else if (isQuadrimestral) {
+      rawSlice = u.values.slice(8, 12);
+    } else {
+      rawSlice = u.values.slice(0, 12);
+    }
+    const filteredSlice = rawSlice.filter((v): v is number => v !== null);
+
+    // Calculate average
+    const avg = filteredSlice.length > 0 ? filteredSlice.reduce((sum, val) => sum + val, 0) / filteredSlice.length : 0;
+
+    // Growth: Dec vs start of period (ignore if null)
+    let startIndex = 0;
+    if (isSemestral) startIndex = 6;
+    else if (isQuadrimestral) startIndex = 8;
+
+    const startVal = u.values[startIndex] ?? 0; // Use 0 if null for growth calculation
+    const endVal = filteredSlice.length > 0 ? filteredSlice[filteredSlice.length - 1] : 0; // Last value in the slice
+    const growth = startVal !== 0 ? ((endVal - startVal) / startVal) * 100 : 0;
+
+    return {
+      slice: filteredSlice,
+      avg,
+      growth,
+      startVal,
+      endVal,
+    };
   };
 
   // Sort by average of relevant slice descending
   const sortedData = [...data].sort((a, b) => {
-    const sliceA = getRelevantSlice(a.values);
-    const sliceB = getRelevantSlice(b.values);
-    const avgA = sliceA.length > 0 ? sliceA.reduce((sum, val) => sum + val, 0) / sliceA.length : 0;
-    const avgB = sliceB.length > 0 ? sliceB.reduce((sum, val) => sum + val, 0) / sliceB.length : 0;
-    return avgB - avgA;
+    const metricsA = calculateMetrics(a);
+    const metricsB = calculateMetrics(b);
+    return metricsB.avg - metricsA.avg;
   });
 
   // Show all units in the list
@@ -61,8 +89,7 @@ const RankingList: React.FC<RankingListProps> = ({ data, indicator }) => {
 
       <div className="p-4 space-y-3 overflow-y-auto flex-1 custom-scrollbar">
         {displayData.map((unit, index) => {
-          const slice = getRelevantSlice(unit.values);
-          const value = slice.length > 0 ? slice.reduce((sum, val) => sum + val, 0) / slice.length : 0;
+          const { avg: value } = calculateMetrics(unit);
           const rank = index + 1;
           const isPinned = unit.isPinned;
 
@@ -72,6 +99,7 @@ const RankingList: React.FC<RankingListProps> = ({ data, indicator }) => {
                 <span className="w-8 text-base font-black text-slate-400">
                   {rank.toString().padStart(2, '0')}
                 </span>
+                <span className="normal-case font-medium opacity-80 text-[8px]">* Ranking baseado na {indicator.periodicidade === 'Semestral' ? 'média dos últimos 6 meses' : indicator.periodicidade === 'QUADRIMESTRAL' ? 'média do 3º quadrimestre' : 'média mensal acumulada'} de 2025.</span>
                 <span className="flex-1 font-black text-base text-slate-900 uppercase tracking-tight">
                   {unit.name}
                 </span>

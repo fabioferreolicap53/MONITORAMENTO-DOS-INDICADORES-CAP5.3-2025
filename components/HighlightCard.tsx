@@ -11,17 +11,29 @@ interface HighlightCardProps {
 const HighlightCard: React.FC<HighlightCardProps> = ({ units, indicator }) => {
   const top3 = units.slice(0, 3);
   const topUnit = top3[0];
+  const isSemestral = indicator.periodicidade === 'Semestral';
+  const isQuadrimestral = indicator.periodicidade === 'QUADRIMESTRAL';
 
   // Calculate average based on periodicidade
   const calculateMetrics = (u: UnitData) => {
-    const isSemestral = indicator.periodicidade === 'Semestral';
-    const rawSlice = isSemestral ? u.values.slice(6, 12) : u.values.slice(0, 12);
+    let rawSlice: (number | null)[] = [];
+    if (isSemestral) {
+      rawSlice = u.values.slice(6, 12);
+    } else if (isQuadrimestral) {
+      rawSlice = u.values.slice(8, 12);
+    } else {
+      rawSlice = u.values.slice(0, 12);
+    }
     const relevantSlice = rawSlice.filter((v): v is number => v !== null);
 
     const avgScore = relevantSlice.length > 0 ? relevantSlice.reduce((sum, val) => sum + val, 0) / relevantSlice.length : 0;
 
-    // Growth: Dec vs Jul if semestral, Dec vs Jan if monthly (ignore if null)
-    const startVal = (isSemestral ? u.values[6] : u.values[0]) ?? 0;
+    // Growth: Dec vs start of period (ignore if null)
+    let startIndex = 0;
+    if (isSemestral) startIndex = 6;
+    else if (isQuadrimestral) startIndex = 8;
+
+    const startVal = u.values[startIndex] ?? 0;
     const endVal = u.values[11] ?? 0;
     const growth = endVal - (startVal as number);
 
@@ -32,10 +44,12 @@ const HighlightCard: React.FC<HighlightCardProps> = ({ units, indicator }) => {
   };
 
   const mainMetrics = calculateMetrics(topUnit);
-  const chartData = mainMetrics.relevantSlice.map((val, idx) => ({
-    i: indicator.periodicidade === 'Semestral' ? idx + 6 : idx,
-    val
-  }));
+  const chartData = mainMetrics.relevantSlice.map((val, idx) => {
+    let i = idx;
+    if (isSemestral) i += 6;
+    else if (isQuadrimestral) i += 8;
+    return { i, val };
+  });
 
   return (
     <section className="bg-primary text-white rounded-xl shadow-xl p-6 flex flex-col relative overflow-hidden h-full border border-white/10">
@@ -150,7 +164,7 @@ const HighlightCard: React.FC<HighlightCardProps> = ({ units, indicator }) => {
 
         <div className="text-[9px] text-blue-300/60 uppercase tracking-widest font-bold text-center border-t border-white/5 pt-3 flex flex-col gap-1">
           <span>ANÁLISE DE DADOS CAP5.3 • {top3.length} MELHORES UNIDADES</span>
-          <span className="normal-case font-medium opacity-80 text-[8px]">* Ranking baseado na {indicator.periodicidade === 'Semestral' ? 'média dos últimos 6 meses' : 'média mensal acumulada'} de 2025.</span>
+          <span className="normal-case font-medium opacity-80 text-[8px]">* Ranking baseado na {indicator.periodicidade === 'Semestral' ? 'média dos últimos 6 meses' : indicator.periodicidade === 'QUADRIMESTRAL' ? 'média do 3º quadrimestre' : 'média mensal acumulada'} de 2025.</span>
         </div>
       </div>
     </section>

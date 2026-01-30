@@ -20,7 +20,14 @@ const MonitoringView: React.FC<MonitoringViewProps> = ({ indicator }) => {
     // Semestral: Jul-Dec (indices 6-11)
     // MENSAL: All year (indices 0-11)
     const getPerformanceValue = (values: (number | null)[]) => {
-        const rawSlice = indicator.periodicidade === 'Semestral' ? values.slice(6, 12) : values.slice(0, 12);
+        let rawSlice: (number | null)[] = [];
+        if (indicator.periodicidade === 'Semestral') {
+            rawSlice = values.slice(6, 12);
+        } else if (indicator.periodicidade === 'QUADRIMESTRAL') {
+            rawSlice = values.slice(8, 12); // Sep-Dec
+        } else {
+            rawSlice = values.slice(0, 12);
+        }
         const relevantValues = rawSlice.filter((v): v is number => v !== null);
         return relevantValues.length > 0 ? relevantValues.reduce((sum, val) => sum + val, 0) / relevantValues.length : 0;
     };

@@ -251,10 +251,10 @@ export const INDICATORS: Indicator[] = [
     id: 'indicator-3.5',
     number: '3.5',
     label: '3.5 - PROPORÇÃO DE PESSOAS COM HIPERTENSÃO, QUE TIVERAM CONSULTA E PRESSÃO ARTERIAL AFERIDA NO SEMESTRE',
-    periodicidade: 'MENSAL',
-    meta: '80,00%',
-    fonte: 'PEP',
-    criterio: 'Média aritmética simples dos resultados mensais acumulados no ano de 2025 (Janeiro a Dezembro de 2025).',
+    periodicidade: 'QUADRIMESTRAL',
+    meta: '50,00%',
+    fonte: 'SIS PRE NATAL',
+    criterio: 'Média aritmética simples dos resultados mensais acumulados no 3º quadrimestre de 2025 (Setembro a Dezembro de 2025).',
     data: DATA_3_5
   },
   {
