@@ -9,7 +9,10 @@ import {
     Baby,
     Search
 } from 'lucide-react';
+<<<<<<< HEAD
 import { sortMenuItems } from '../utils/sorting';
+=======
+>>>>>>> 53fe7f6407f6a02ef5c8abe89806f3b23bbfbe4f
 
 interface SidebarProps {
     isOpen: boolean;
@@ -25,8 +28,13 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen, activeView, setAct
     // Sidebar behavior: effectively open if explicitly toggled OR hovered while collapsed
     const isExpanded = isOpen || isHovered;
 
+<<<<<<< HEAD
     const menuItems = sortMenuItems([
         { id: 'monitoring', label: '1.3 - PERCENTUAL DE CRIANÇAS COM ATÉ 6 MESES EM ALEITAMENTO MATERNO EXCLUSIVO', number: '1.3' },
+=======
+    const menuItems = [
+        { id: 'monitoring', label: 'PERCENTUAL DE CRIANÇAS COM ATÉ 6 MESES EM ALEITAMENTO MATERNO EXCLUSIVO', number: '1.3' },
+>>>>>>> 53fe7f6407f6a02ef5c8abe89806f3b23bbfbe4f
         { id: 'indicator-1.5', label: '1.5 - PROPORÇÃO DE CRIANÇAS ENTRE 12 E 24 MESES COM PELO MENOS 1 REGISTRO PARAMETRIZADO DE AVALIAÇÃO DO DESENVOLVIMENTO PSICOMOTOR AOS 24 MESES DE VIDA', number: '1.5' },
         { id: 'modal', label: 'MODAL', number: 'M' },
         { id: 'indicator-3.5', label: '3.5 - PROPORÇÃO DE PESSOAS COM HIPERTENSÃO, QUE TIVERAM CONSULTA E PRESSÃO ARTERIAL AFERIDA NO SEMESTRE', number: '3.5' },
@@ -35,7 +43,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen, activeView, setAct
         { id: 'indicator-1.12', label: '1.12 - PERCENTUAL DE GESTANTES COM PELO MENOS 7 CONSULTAS PRÉ-NATAL (PN) REALIZADAS, SENDO A 1ª ATÉ A 12ª SEMANA DE GESTAÇÃO', number: '1.12' },
         { id: 'indicator-3.2', label: '3.2 - PROPORÇÃO DE PESSOAS COM DIABETES, COM HBA1C < OU = 8% NOS ÚLTIMOS 6 MESES', number: '3.2' },
         { id: 'indicator-3.3', label: '3.3 - PERCENTUAL DE PESSOAS COM DIABETES COM PELO MENOS 01 REGISTRO ANUAL DE AVALIAÇÃO DOS PÉS', number: '3.3' },
+<<<<<<< HEAD
     ]);
+=======
+    ];
+>>>>>>> 53fe7f6407f6a02ef5c8abe89806f3b23bbfbe4f
 
     const filteredItems = menuItems.filter(item =>
         item.label.toLowerCase().includes(searchTerm.toLowerCase()) ||

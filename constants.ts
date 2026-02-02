@@ -222,7 +222,11 @@ export const INDICATORS: Indicator[] = [
   {
     id: 'monitoring',
     number: '1.3',
+<<<<<<< HEAD
     label: '1.3 - PERCENTUAL DE CRIANÇAS COM ATÉ 6 MESES EM ALEITAMENTO MATERNO EXCLUSIVO',
+=======
+    label: 'PERCENTUAL DE CRIANÇAS COM ATÉ 6 MESES EM ALEITAMENTO MATERNO EXCLUSIVO',
+>>>>>>> 53fe7f6407f6a02ef5c8abe89806f3b23bbfbe4f
     periodicidade: 'Semestral',
     meta: '100,00%',
     fonte: 'Plataforma SUBPAV',
