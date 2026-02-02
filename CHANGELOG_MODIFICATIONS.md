@@ -47,5 +47,45 @@ Implementado um novo sistema de ordenação para os itens da navegação lateral
 - `components/Sidebar.tsx`: Integração da lógica de ordenação no menu.
 - `package.json`: Adicionada dependência `vitest` para validação.
 
+## 4. Criação do Indicador 4.3 e Duplicação da Página MODAL
+Atendendo à solicitação de expansão do monitoramento, foi criada uma nova página para o indicador 4.3.
+
+**Ações realizadas:**
+- **Duplicação da Estrutura:** A página "MODAL" foi utilizada como base para a criação do indicador `indicator-4.3`.
+- **Atualização de Metadados:**
+  - **Título:** `4.3 - PROPORÇÃO DE GESTANTES COM ATENDIMENTO ODONTOLÓGICO REALIZADO NOS ÚLTIMOS 12 MESES`.
+  - **Periodicidade:** Atualizada para `QUADRIMESTRAL`.
+  - **Meta 2025:** `60,00%`.
+  - **Fonte:** `SISAB`.
+  - **Critério de Avaliação:** `Média aritmética simples dos resultados do 3º quadrimestre (Setembro a Dezembro de 2025)`.
+- **Gestão de Dados:**
+  - Criado o conjunto de dados `DATA_4_3` em `constants.ts` com os valores extraídos da tabela fornecida.
+  - Implementado tratamento para células `NA` (not available), garantindo que sejam desconsideradas nos cálculos de média de performance.
+- **Sincronização de Componentes:**
+  - O gráfico de **Ranking de Desempenho 2025** foi configurado para refletir a periodicidade quadrimestral (set-dez).
+  - O card **Líder do Território** e a seção **Seguradores de Performance** foram sincronizados para exibir as 3 unidades com melhor média no 3º quadrimestre.
+
+**Arquivos modificados:**
+- `constants.ts`: Adicionado `DATA_4_3` e entrada em `INDICATORS`.
+- `components/Sidebar.tsx`: Adicionado item `indicator-4.3` ao menu.
+- `views/MonitoringView.tsx`: Ajustada lógica de cálculo para suportar periodicidade `QUADRIMESTRAL`.
+- `components/HighlightCard.tsx`: Ajustada lógica de exibição e métricas para suporte a `QUADRIMESTRAL`.
+
+## 5. Criação do Indicador 4.5
+Atendendo à nova solicitação, foi criada uma segunda cópia da página "MODAL" para o indicador 4.5.
+
+**Ações realizadas:**
+- **Duplicação da Estrutura:** A página "MODAL" serviu como base para o `indicator-4.5`.
+- **Atualização de Metadados:**
+  - **Título:** `4.5 - PROPORÇÃO DE PACIENTES TABAGISTAS QUE PASSARAM POR ATENDIMENTO ODONTOLÓGICO INDIVIDUAL, GRUPO OU ATIVIDADE COLETIVA NOS ÚLTIMOS 12 MESES`.
+  - **Periodicidade:** Mantida como `MENSAL` (padrão da MODAL).
+  - **Meta 2025:** `80,00%`.
+  - **Fonte:** `PEP`.
+  - **Dados:** Utilizando temporariamente `DATA_1_5` conforme a estrutura da página MODAL.
+
+**Arquivos modificados:**
+- `constants.ts`: Adicionada entrada para `indicator-4.5` em `INDICATORS`.
+- `components/Sidebar.tsx`: Adicionado item `indicator-4.5` ao menu lateral.
+
 ---
 *Desenvolvido em 02/02/2026*

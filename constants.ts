@@ -218,15 +218,40 @@ const DATA_3_10: UnitData[] = [
   { id: 25, name: 'SAVIO', isPinned: false, values: [53.51, 53.53, 53.15, 52.51, 54.12, 53.62, 53.81, 53.88, 54.20, 53.72, 53.63, 53.75] }
 ];
 
+const DATA_4_3: UnitData[] = [
+  { id: 0, name: 'CAP5.3', isPinned: true, values: [78.45, 84.64, 82.52, 78.65, 85.08, 85.04, 82.91, 83.84, 83.18, 84.22, 80.95, 81.18] },
+  { id: 1, name: 'ALICE', isPinned: false, values: [90.91, 100.00, 93.75, 91.67, 94.44, 94.44, 93.33, 88.89, 80.00, 91.67, 83.33, 76.92] },
+  { id: 2, name: 'DEOLINDO', isPinned: false, values: [100.00, 90.00, 80.00, 57.14, 78.57, 78.57, 56.25, 85.71, 85.71, 66.67, 90.00, 57.14] },
+  { id: 3, name: 'EDSON', isPinned: false, values: [80.95, 75.00, 96.30, 61.11, 92.86, 92.86, 78.95, 94.44, 95.00, 100.00, 85.71, 71.43] },
+  { id: 4, name: 'ERNANI', isPinned: false, values: [48.28, 90.48, 90.32, 93.75, 83.33, 83.33, 82.61, 86.36, 77.78, 83.33, 86.67, 92.31] },
+  { id: 5, name: 'HELANDE', isPinned: false, values: [66.67, 72.73, 50.00, 80.00, 54.55, 54.55, 70.00, 50.00, 14.29, 33.33, 77.78, 100.00] },
+  { id: 6, name: 'ILZO', isPinned: false, values: [62.50, 100.00, 100.00, 76.47, 100.00, 100.00, 93.33, 100.00, 83.33, 100.00, 88.89, 100.00] },
+  { id: 7, name: 'JAMIL', isPinned: false, values: [100.00, 85.71, 94.12, 57.14, 71.43, 71.43, 85.71, 100.00, 81.82, 92.31, 66.67, 75.00] },
+  { id: 8, name: 'JBC', isPinned: false, values: [78.57, 73.08, 68.00, 77.42, 84.00, 84.00, 90.48, 82.61, 94.12, 93.10, 80.00, 94.74] },
+  { id: 9, name: 'CIRAUDO', isPinned: false, values: [85.71, 88.89, 76.92, 67.86, 75.76, 75.76, 80.65, 78.13, 85.71, 80.00, 92.31, 95.24] },
+  { id: 10, name: 'LENICE', isPinned: false, values: [85.71, 83.33, 85.71, 78.57, 89.47, 89.47, 88.24, 75.00, 66.67, 78.26, 73.33, 75.00] },
+  { id: 11, name: 'LOURENCO', isPinned: false, values: [60.00, 100.00, 80.00, 100.00, 100.00, 100.00, 69.23, 81.82, 100.00, 70.00, 57.14, 100.00] },
+  { id: 12, name: 'SAMUEL', isPinned: false, values: [100.00, 66.67, 100.00, 88.89, 78.95, 78.95, 100.00, 80.00, 100.00, 93.33, 90.00, 77.78] },
+  { id: 13, name: 'SERGIO AROUCA', isPinned: false, values: [76.47, 76.92, 63.64, 73.68, 92.86, 92.86, 90.00, 73.68, 75.00, 66.67, 40.00, 61.54] },
+  { id: 14, name: 'VALERIA', isPinned: false, values: [83.33, 92.86, 75.00, 85.00, 80.00, 80.00, 94.44, 100.00, 90.00, 89.47, 83.33, 88.89] },
+  { id: 15, name: 'WALDEMAR', isPinned: false, values: [61.76, 80.77, 85.42, 73.08, 80.00, 80.00, 75.68, 73.91, 79.17, 82.93, 80.95, 70.83] },
+  { id: 16, name: 'ADELINO', isPinned: false, values: [95.24, 100.00, 100.00, 88.89, 100.00, 100.00, 91.67, 100.00, 84.62, 100.00, 100.00, 85.71] },
+  { id: 17, name: 'ALOYSIO', isPinned: false, values: [100.00, 100.00, 100.00, 100.00, 100.00, 100.00, 100.00, 100.00, 100.00, 100.00, 100.00, 100.00] },
+  { id: 18, name: 'CATTAPRETA', isPinned: false, values: [100.00, 92.31, 80.00, 100.00, 100.00, 100.00, 88.89, 100.00, 100.00, 85.71, 100.00, 100.00] },
+  { id: 19, name: 'CESARIO', isPinned: false, values: [90.48, 85.71, 86.96, 83.33, 84.21, 84.21, 68.42, 57.14, 76.47, 76.47, 55.56, 58.82] },
+  { id: 20, name: 'CYRO', isPinned: false, values: [50.00, 62.50, 68.75, 72.73, 80.00, 80.00, 83.33, 80.00, 50.00, 72.73, 80.00, 66.67] },
+  { id: 21, name: 'DECIO', isPinned: false, values: [87.50, 86.67, 95.00, 76.19, 95.83, 95.83, 90.00, 75.00, 96.00, 82.35, 91.67, 80.00] },
+  { id: 22, name: 'EMYDIO', isPinned: false, values: [64.71, 84.62, 73.68, 75.00, 66.67, 66.67, 86.67, 77.78, 70.59, 73.33, 80.00, 89.47] },
+  { id: 23, name: 'FLORIPES', isPinned: false, values: [88.89, 75.00, 83.33, 75.00, 85.71, 85.71, 57.14, 100.00, 100.00, 100.00, 80.00, 66.67] },
+  { id: 24, name: 'MARIA APARECIDA', isPinned: false, values: [100.00, null, 0.00, 100.00, 0.00, 0.00, 75.00, 100.00, 71.43, 100.00, null, 100.00] },
+  { id: 25, name: 'SAVIO', isPinned: false, values: [100.00, 88.89, 70.59, 88.24, 100.00, 100.00, 75.00, 88.46, 100.00, 100.00, 75.00, 90.00] }
+];
+
 export const INDICATORS: Indicator[] = [
   {
     id: 'monitoring',
     number: '1.3',
-<<<<<<< HEAD
     label: '1.3 - PERCENTUAL DE CRIANÇAS COM ATÉ 6 MESES EM ALEITAMENTO MATERNO EXCLUSIVO',
-=======
-    label: 'PERCENTUAL DE CRIANÇAS COM ATÉ 6 MESES EM ALEITAMENTO MATERNO EXCLUSIVO',
->>>>>>> 53fe7f6407f6a02ef5c8abe89806f3b23bbfbe4f
     periodicidade: 'Semestral',
     meta: '100,00%',
     fonte: 'Plataforma SUBPAV',
@@ -279,6 +304,26 @@ export const INDICATORS: Indicator[] = [
     fonte: 'PEP',
     criterio: 'Média aritmética simples dos resultados mensais acumulados no ano de 2025 (Janeiro a Dezembro de 2025).',
     data: DATA_1_5
+  },
+  {
+    id: 'indicator-4.5',
+    number: '4.5',
+    label: '4.5 - PROPORÇÃO DE PACIENTES TABAGISTAS QUE PASSARAM POR ATENDIMENTO ODONTOLÓGICO INDIVIDUAL, GRUPO OU ATIVIDADE COLETIVA NOS ÚLTIMOS 12 MESES',
+    periodicidade: 'MENSAL',
+    meta: '80,00%',
+    fonte: 'PEP',
+    criterio: 'Média aritmética simples dos resultados mensais acumulados no ano de 2025 (Janeiro a Dezembro de 2025).',
+    data: DATA_1_5
+  },
+  {
+    id: 'indicator-4.3',
+    number: '4.3',
+    label: '4.3 - PROPORÇÃO DE GESTANTES COM ATENDIMENTO ODONTOLÓGICO REALIZADO NOS ÚLTIMOS 12 MESES',
+    periodicidade: 'QUADRIMESTRAL',
+    meta: '60,00%',
+    fonte: 'SISAB',
+    criterio: 'Média aritmética simples dos resultados do 3º quadrimestre (Setembro a Dezembro de 2025).',
+    data: DATA_4_3
   },
   {
     id: 'indicator-3.10',
