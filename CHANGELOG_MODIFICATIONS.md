@@ -136,3 +136,15 @@ Atendendo à solicitação, foi criada uma nova página para o indicador 6.2 bas
 
 ---
 *Desenvolvido em 02/02/2026*
+
+## 8. Exclusão da Página MODAL
+Removida a página de template "MODAL" após a criação de todos os indicadores necessários (4.3, 4.5, 4.6 e 6.2).
+
+**Ações realizadas:**
+- **Remoção de Metadados:** Excluída a entrada `id: 'modal'` do array `INDICATORS` em `constants.ts`.
+- **Limpeza da Sidebar:** Removido o item "MODAL" do menu lateral em `Sidebar.tsx`.
+- **Organização:** A exclusão mantém o projeto limpo, exibindo apenas os indicadores reais de monitoramento.
+
+**Arquivos modificados:**
+- `constants.ts`: Remoção da configuração do indicador modal.
+- `components/Sidebar.tsx`: Remoção do item do menu.

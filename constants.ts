@@ -383,16 +383,6 @@ export const INDICATORS: Indicator[] = [
     data: DATA_1_5
   },
   {
-    id: 'modal',
-    number: 'M',
-    label: 'MODAL',
-    periodicidade: 'MENSAL',
-    meta: '80,00%',
-    fonte: 'PEP',
-    criterio: 'Média aritmética simples dos resultados mensais acumulados no ano de 2025 (Janeiro a Dezembro de 2025).',
-    data: DATA_1_5
-  },
-  {
     id: 'indicator-6.2',
     number: '6.2',
     label: '6.2 - PROPORÇÃO DE IDOSOS CADASTRADOS COM REGISTRO DE AVALIAÇÃO MULTIDIMENSIONAL',

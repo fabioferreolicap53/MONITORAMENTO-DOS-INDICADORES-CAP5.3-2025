@@ -28,7 +28,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen, activeView, setAct
     const menuItems = sortMenuItems([
         { id: 'monitoring', label: '1.3 - PERCENTUAL DE CRIANÇAS COM ATÉ 6 MESES EM ALEITAMENTO MATERNO EXCLUSIVO', number: '1.3' },
         { id: 'indicator-1.5', label: '1.5 - PROPORÇÃO DE CRIANÇAS ENTRE 12 E 24 MESES COM PELO MENOS 1 REGISTRO PARAMETRIZADO DE AVALIAÇÃO DO DESENVOLVIMENTO PSICOMOTOR AOS 24 MESES DE VIDA', number: '1.5' },
-        { id: 'modal', label: 'MODAL', number: 'M' },
         { id: 'indicator-4.3', label: '4.3 - PROPORÇÃO DE GESTANTES COM ATENDIMENTO ODONTOLÓGICO REALIZADO NOS ÚLTIMOS 12 MESES', number: '4.3' },
         { id: 'indicator-4.5', label: '4.5 - PROPORÇÃO DE PACIENTES TABAGISTAS QUE PASSARAM POR ATENDIMENTO ODONTOLÓGICO INDIVIDUAL, GRUPO OU ATIVIDADE COLETIVA NOS ÚLTIMOS 12 MESES', number: '4.5' },
         { id: 'indicator-4.6', label: '4.6 - PERCENTUAL DE PACIENTES COM TB AVALIADOS PELA EQUIPE DE SAÚDE BUCAL NA ALTA POR CURA', number: '4.6' },
