@@ -31,6 +31,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen, activeView, setAct
         { id: 'modal', label: 'MODAL', number: 'M' },
         { id: 'indicator-4.3', label: '4.3 - PROPORÇÃO DE GESTANTES COM ATENDIMENTO ODONTOLÓGICO REALIZADO NOS ÚLTIMOS 12 MESES', number: '4.3' },
         { id: 'indicator-4.5', label: '4.5 - PROPORÇÃO DE PACIENTES TABAGISTAS QUE PASSARAM POR ATENDIMENTO ODONTOLÓGICO INDIVIDUAL, GRUPO OU ATIVIDADE COLETIVA NOS ÚLTIMOS 12 MESES', number: '4.5' },
+        { id: 'indicator-4.6', label: '4.6 - PERCENTUAL DE PACIENTES COM TB AVALIADOS PELA EQUIPE DE SAÚDE BUCAL NA ALTA POR CURA', number: '4.6' },
+        { id: 'indicator-6.2', label: '6.2 - PROPORÇÃO DE IDOSOS CADASTRADOS COM REGISTRO DE AVALIAÇÃO MULTIDIMENSIONAL', number: '6.2' },
         { id: 'indicator-3.5', label: '3.5 - PROPORÇÃO DE PESSOAS COM HIPERTENSÃO, QUE TIVERAM CONSULTA E PRESSÃO ARTERIAL AFERIDA NO SEMESTRE', number: '3.5' },
         { id: 'indicator-3.10', label: '3.10 - PERCENTUAL DE MULHERES ENTRE 25 E 64 ANOS COM COLPOCITOLÓGICO REGISTRADO NOS 3 ANOS', number: '3.10' },
         { id: 'indicator-1.7', label: '1.7 - PERCENTUAL DE CRIANÇAS COM 7 OU MAIS CONSULTAS DE PUERICULTURA REALIZADAS NO PRIMEIRO ANO DE VIDA', number: '1.7' },

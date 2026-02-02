@@ -71,21 +71,68 @@ Atendendo à solicitação de expansão do monitoramento, foi criada uma nova p�
 - `views/MonitoringView.tsx`: Ajustada lógica de cálculo para suportar periodicidade `QUADRIMESTRAL`.
 - `components/HighlightCard.tsx`: Ajustada lógica de exibição e métricas para suporte a `QUADRIMESTRAL`.
 
-## 5. Criação do Indicador 4.5
-Atendendo à nova solicitação, foi criada uma segunda cópia da página "MODAL" para o indicador 4.5.
+## 5. Criação e Atualização do Indicador 4.5
+Atendendo à nova solicitação, foi criada uma página para o indicador 4.5 baseada na estrutura "MODAL" e atualizada com dados específicos.
 
 **Ações realizadas:**
 - **Duplicação da Estrutura:** A página "MODAL" serviu como base para o `indicator-4.5`.
 - **Atualização de Metadados:**
   - **Título:** `4.5 - PROPORÇÃO DE PACIENTES TABAGISTAS QUE PASSARAM POR ATENDIMENTO ODONTOLÓGICO INDIVIDUAL, GRUPO OU ATIVIDADE COLETIVA NOS ÚLTIMOS 12 MESES`.
-  - **Periodicidade:** Mantida como `MENSAL` (padrão da MODAL).
-  - **Meta 2025:** `80,00%`.
-  - **Fonte:** `PEP`.
-  - **Dados:** Utilizando temporariamente `DATA_1_5` conforme a estrutura da página MODAL.
+  - **Periodicidade:** `MENSAL`.
+  - **Meta 2025:** `70,00%`.
+  - **Fonte:** `(PEP) UAP / Plataforma SUBPAV`.
+  - **Critério de Avaliação:** `Média aritmética simples dos resultados mensais acumulados no ano de 2025 (Janeiro a Dezembro de 2025)`.
+- **Gestão de Dados:**
+  - Criado o conjunto de dados `DATA_4_5` em `constants.ts` com os valores extraídos da tabela fornecida.
+  - Implementado tratamento para células desconsideradas nos cálculos de média de performance (null handling).
+- **Sincronização de Componentes:**
+  - O gráfico de **Ranking de Desempenho 2025** e o card **Líder do Território** foram sincronizados para refletir a média mensal acumulada de 2025.
 
 **Arquivos modificados:**
-- `constants.ts`: Adicionada entrada para `indicator-4.5` em `INDICATORS`.
+- `constants.ts`: Adicionado `DATA_4_5` e entrada configurada em `INDICATORS`.
 - `components/Sidebar.tsx`: Adicionado item `indicator-4.5` ao menu lateral.
+- `views/MonitoringView.tsx`: Verificada compatibilidade da lógica de cálculo para periodicidade `MENSAL`.
+- `components/HighlightCard.tsx`: Verificada compatibilidade da exibição de métricas para suporte a `MENSAL`.
+
+## 6. Criação e Atualização do Indicador 4.6
+Atendendo à nova solicitação, foi criada uma página para o indicador 4.6 baseada na estrutura "MODAL" e atualizada com dados específicos.
+
+**Ações realizadas:**
+- **Atualização de Metadados:**
+  - **Título:** `4.6 - PERCENTUAL DE PACIENTES COM TB AVALIADOS PELA EQUIPE DE SAÚDE BUCAL NA ALTA POR CURA`.
+  - **Periodicidade:** `MENSAL`.
+  - **Meta 2025:** `80,00%`.
+  - **Fonte:** `PEP`.
+  - **Critério de Avaliação:** `Média aritmética simples dos resultados mensais acumulados no ano de 2025 (Janeiro a Dezembro de 2025).`.
+- **Gestão de Dados:**
+  - Criado o conjunto de dados `DATA_4_6` em `constants.ts` com os valores extraídos da imagem fornecida.
+  - Implementado tratamento para células `NA` da imagem, convertendo-as para `null` para que sejam desconsideradas nos cálculos de média de performance.
+- **Sincronização de Componentes:**
+  - O gráfico de **Ranking de Desempenho 2025** e o card **Líder do Território** foram sincronizados para refletir a média mensal acumulada de 2025, garantindo que o card mostre exatamente as 3 primeiras unidades do ranking.
+
+**Arquivos modificados:**
+- `constants.ts`: Adicionado `DATA_4_6`, entrada configurada em `INDICATORS` e remoção de duplicata de `DATA_3_10` que causava erro de compilação.
+- `components/Sidebar.tsx`: Adicionado item `indicator-4.6` ao menu lateral.
+
+## 7. Criação e Atualização do Indicador 6.2
+Atendendo à solicitação, foi criada uma nova página para o indicador 6.2 baseada na estrutura "MODAL" e atualizada com dados específicos.
+
+**Ações realizadas:**
+- **Atualização de Metadados:**
+  - **Título:** `6.2 - PROPORÇÃO DE IDOSOS CADASTRADOS COM REGISTRO DE AVALIAÇÃO MULTIDIMENSIONAL`.
+  - **Periodicidade:** `MENSAL`.
+  - **Meta 2025:** `50%`.
+  - **Fonte:** `PEP`.
+  - **Critério de Avaliação:** `Média aritmética simples dos resultados mensais acumulados no ano de 2025 (Janeiro a Dezembro de 2025).`.
+- **Gestão de Dados:**
+  - Criado o conjunto de dados `DATA_6_2` em `constants.ts` com os valores extraídos da imagem fornecida.
+  - Implementado tratamento para células desconsideradas nos cálculos de média de performance (null handling).
+- **Sincronização de Componentes:**
+  - O gráfico de **Ranking de Desempenho 2025** e o card **Líder do Território** foram sincronizados para refletir a média mensal acumulada de 2025, garantindo que o card mostre exatamente as 3 primeiras unidades do ranking.
+
+**Arquivos modificados:**
+- `constants.ts`: Adicionado `DATA_6_2` e entrada configurada em `INDICATORS`.
+- `components/Sidebar.tsx`: Adicionado item `indicator-6.2` ao menu lateral.
 
 ---
 *Desenvolvido em 02/02/2026*

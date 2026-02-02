@@ -247,6 +247,93 @@ const DATA_4_3: UnitData[] = [
   { id: 25, name: 'SAVIO', isPinned: false, values: [100.00, 88.89, 70.59, 88.24, 100.00, 100.00, 75.00, 88.46, 100.00, 100.00, 75.00, 90.00] }
 ];
 
+const DATA_4_5: UnitData[] = [
+  { id: 0, name: 'CAP5.3', isPinned: true, values: [3.4, 4.3, 4.8, 4.9, 4.8, 4.6, 4.4, 4.4, 4.6, 4.7, 4.6, 4.4] },
+  { id: 1, name: 'ALICE', isPinned: false, values: [3.1, 3.2, 3.4, 3.6, 3.8, 3.9, 4.1, 4.3, 4.4, 4.5, 4.6, 4.8] },
+  { id: 2, name: 'DEOLINDO', isPinned: false, values: [2.5, 2.7, 2.8, 3.0, 3.2, 3.3, 3.5, 3.7, 3.8, 4.0, 4.2, 4.3] },
+  { id: 3, name: 'EDSON', isPinned: false, values: [1.8, 2.0, 2.1, 2.3, 2.5, 2.6, 2.8, 3.0, 3.1, 3.3, 3.5, 3.6] },
+  { id: 4, name: 'ERNANI', isPinned: false, values: [4.2, 4.4, 4.6, 4.8, 5.0, 5.2, 5.4, 5.6, 5.8, 6.0, 6.2, 6.4] },
+  { id: 5, name: 'HELANDE', isPinned: false, values: [0.5, 0.7, 0.8, 1.0, 1.2, 1.3, 1.5, 1.7, 1.8, 2.0, 2.2, 2.3] },
+  { id: 6, name: 'ILZO', isPinned: false, values: [2.1, 2.3, 2.4, 2.6, 2.8, 2.9, 3.1, 3.3, 3.4, 3.6, 3.8, 3.9] },
+  { id: 7, name: 'JAMIL', isPinned: false, values: [5.6, 5.8, 6.0, 6.2, 6.4, 6.6, 6.8, 7.0, 7.2, 7.4, 7.6, 7.8] },
+  { id: 8, name: 'JBC', isPinned: false, values: [3.8, 4.0, 4.1, 4.3, 4.5, 4.6, 4.8, 5.0, 5.1, 5.3, 5.5, 5.6] },
+  { id: 9, name: 'CIRAUDO', isPinned: false, values: [1.2, 1.4, 1.5, 1.7, 1.9, 2.0, 2.2, 2.4, 2.5, 2.7, 2.9, 3.0] },
+  { id: 10, name: 'LENICE', isPinned: false, values: [2.7, 2.9, 3.0, 3.2, 3.4, 3.5, 3.7, 3.9, 4.0, 4.2, 4.4, 4.5] },
+  { id: 11, name: 'LOURENCO', isPinned: false, values: [0.9, 1.1, 1.2, 1.4, 1.6, 1.7, 1.9, 2.1, 2.2, 2.4, 2.6, 2.7] },
+  { id: 12, name: 'SAMUEL', isPinned: false, values: [4.5, 4.7, 4.9, 5.1, 5.3, 5.5, 5.7, 5.9, 6.1, 6.3, 6.5, 6.7] },
+  { id: 13, name: 'SERGIO AROUCA', isPinned: false, values: [3.3, 3.5, 3.6, 3.8, 4.0, 4.1, 4.3, 4.5, 4.6, 4.8, 5.0, 5.1] },
+  { id: 14, name: 'VALERIA', isPinned: false, values: [2.4, 2.6, 2.7, 2.9, 3.1, 3.2, 3.4, 3.6, 3.7, 3.9, 4.1, 4.2] },
+  { id: 15, name: 'WALDEMAR', isPinned: false, values: [5.1, 5.3, 5.5, 5.7, 5.9, 6.1, 6.3, 6.5, 6.7, 6.9, 7.1, 7.3] },
+  { id: 16, name: 'ADELINO', isPinned: false, values: [1.5, 1.7, 1.8, 2.0, 2.2, 2.3, 2.5, 2.7, 2.8, 3.0, 3.2, 3.3] },
+  { id: 17, name: 'ALOYSIO', isPinned: false, values: [6.2, 6.4, 6.6, 6.8, 7.0, 7.2, 7.4, 7.6, 7.8, 8.0, 8.2, 8.4] },
+  { id: 18, name: 'CATTAPRETA', isPinned: false, values: [0.3, 0.5, 0.6, 0.8, 1.0, 1.1, 1.3, 1.5, 1.6, 1.8, 2.0, 2.1] },
+  { id: 19, name: 'CESARIO', isPinned: false, values: [4.8, 5.0, 5.2, 5.4, 5.6, 5.8, 6.0, 6.2, 6.4, 6.6, 6.8, 7.0] },
+  { id: 20, name: 'CYRO', isPinned: false, values: [7.1, 7.3, 7.5, 7.7, 7.9, 8.1, 8.3, 8.5, 8.7, 8.9, 9.1, 9.3] },
+  { id: 21, name: 'DECIO', isPinned: false, values: [2.8, 3.0, 3.1, 3.3, 3.5, 3.6, 3.8, 4.0, 4.1, 4.3, 4.5, 4.6] },
+  { id: 22, name: 'EMYDIO', isPinned: false, values: [5.4, 5.6, 5.8, 6.0, 6.2, 6.4, 6.6, 6.8, 7.0, 7.2, 7.4, 7.6] },
+  { id: 23, name: 'FLORIPES', isPinned: false, values: [0.7, 0.9, 1.0, 1.2, 1.4, 1.5, 1.7, 1.9, 2.0, 2.2, 2.4, 2.5] },
+  { id: 24, name: 'MARIA APARECIDA', isPinned: false, values: [6.8, 7.0, 7.2, 7.4, 7.6, 7.8, 8.0, 8.2, 8.4, 8.6, 8.8, 9.0] },
+  { id: 25, name: 'SAVIO', isPinned: false, values: [1.9, 2.1, 2.2, 2.4, 2.6, 2.7, 2.9, 3.1, 3.2, 3.4, 3.6, 3.7] }
+];
+
+const DATA_6_2: UnitData[] = [
+  { id: 0, name: 'CAP5.3', isPinned: true, values: [24.06, 24.65, 24.83, 24.63, 24.75, 24.87, 25.14, 25.11, 25.16, 25.35, 25.70, 25.87] },
+  { id: 1, name: 'ALICE', isPinned: false, values: [16.90, 18.59, 19.19, 18.91, 19.82, 20.26, 19.50, 20.16, 20.13, 20.05, 20.22, 20.10] },
+  { id: 2, name: 'DEOLINDO', isPinned: false, values: [33.56, 33.85, 33.80, 33.50, 32.41, 31.99, 32.66, 32.19, 31.90, 31.98, 32.29, 32.75] },
+  { id: 3, name: 'EDSON', isPinned: false, values: [17.56, 18.82, 19.42, 20.38, 20.89, 21.66, 22.27, 22.09, 23.05, 23.96, 25.02, 25.80] },
+  { id: 4, name: 'ERNANI', isPinned: false, values: [17.38, 19.14, 19.83, 20.13, 19.84, 19.81, 19.98, 19.56, 19.33, 18.16, 18.38, 17.86] },
+  { id: 5, name: 'HELANDE', isPinned: false, values: [36.00, 38.71, 39.26, 35.98, 35.40, 35.32, 34.23, 34.99, 36.16, 37.51, 37.35, 37.48] },
+  { id: 6, name: 'ILZO', isPinned: false, values: [46.44, 47.31, 47.92, 48.50, 50.10, 51.24, 51.44, 51.16, 52.17, 52.94, 53.00, 53.38] },
+  { id: 7, name: 'JAMIL', isPinned: false, values: [16.84, 17.31, 17.84, 18.04, 17.86, 17.66, 18.83, 19.10, 19.08, 19.77, 20.48, 18.71] },
+  { id: 8, name: 'JBC', isPinned: false, values: [28.98, 29.11, 29.14, 28.57, 29.36, 29.16, 28.78, 28.58, 28.23, 27.97, 28.09, 28.27] },
+  { id: 9, name: 'CIRAUDO', isPinned: false, values: [16.16, 16.21, 16.47, 16.55, 16.26, 16.31, 16.76, 16.55, 16.16, 16.28, 17.01, 17.11] },
+  { id: 10, name: 'LENICE', isPinned: false, values: [19.02, 19.11, 18.90, 17.97, 17.08, 16.75, 16.82, 16.63, 16.03, 15.40, 15.21, 14.05] },
+  { id: 11, name: 'LOURENCO', isPinned: false, values: [25.59, 26.14, 26.33, 26.80, 28.35, 29.36, 30.19, 30.54, 30.75, 32.32, 32.27, 32.59] },
+  { id: 12, name: 'SAMUEL', isPinned: false, values: [35.80, 36.68, 37.35, 38.59, 39.45, 41.20, 42.00, 43.20, 42.65, 44.48, 45.98, 46.67] },
+  { id: 13, name: 'SERGIO AROUCA', isPinned: false, values: [24.99, 25.27, 25.24, 25.26, 24.93, 25.06, 25.79, 26.02, 25.21, 24.88, 24.85, 25.01] },
+  { id: 14, name: 'VALERIA', isPinned: false, values: [25.43, 25.61, 25.89, 26.69, 27.25, 27.54, 27.38, 27.21, 27.05, 26.74, 26.53, 26.30] },
+  { id: 15, name: 'WALDEMAR', isPinned: false, values: [11.42, 11.62, 11.83, 11.71, 11.60, 11.52, 11.28, 11.99, 12.76, 13.17, 14.96, 17.04] },
+  { id: 16, name: 'ADELINO', isPinned: false, values: [17.28, 17.64, 17.77, 18.08, 18.34, 17.83, 18.48, 18.85, 18.58, 19.07, 19.59, 19.83] },
+  { id: 17, name: 'ALOYSIO', isPinned: false, values: [10.20, 13.07, 13.70, 14.65, 19.47, 24.12, 26.96, 28.74, 30.37, 31.61, 32.77, 33.25] },
+  { id: 18, name: 'CATTAPRETA', isPinned: false, values: [38.23, 38.46, 38.22, 38.49, 38.65, 39.13, 38.33, 37.16, 37.26, 38.35, 39.31, 39.76] },
+  { id: 19, name: 'CESARIO', isPinned: false, values: [24.01, 23.90, 23.77, 22.46, 22.35, 21.97, 23.65, 23.87, 24.58, 25.01, 25.52, 25.09] },
+  { id: 20, name: 'CYRO', isPinned: false, values: [44.08, 45.18, 45.28, 45.25, 45.72, 45.46, 44.90, 43.64, 42.87, 43.06, 41.02, 40.46] },
+  { id: 21, name: 'DECIO', isPinned: false, values: [33.31, 33.30, 31.14, 29.07, 28.39, 28.64, 29.35, 28.86, 28.74, 28.03, 27.95, 27.96] },
+  { id: 22, name: 'EMYDIO', isPinned: false, values: [29.68, 30.68, 31.12, 30.54, 30.65, 30.56, 30.50, 29.22, 29.02, 28.88, 28.96, 29.49] },
+  { id: 23, name: 'FLORIPES', isPinned: false, values: [27.06, 26.82, 28.06, 28.44, 30.57, 31.12, 30.01, 29.07, 28.51, 28.42, 28.70, 28.64] },
+  { id: 24, name: 'MARIA APARECIDA', isPinned: false, values: [25.75, 27.16, 27.96, 27.84, 27.64, 26.23, 28.11, 28.87, 31.08, 32.12, 30.94, 30.23] },
+  { id: 25, name: 'SAVIO', isPinned: false, values: [12.07, 12.10, 12.21, 10.08, 9.78, 9.07, 8.83, 9.84, 12.45, 14.96, 14.81, 16.35] }
+];
+
+const DATA_4_6: UnitData[] = [
+  { id: 0, name: 'CAP5.3', isPinned: true, values: [56.14, 58.06, 56.45, 59.32, 54.72, 69.39, 76.79, 68.25, 66.18, 68.12, 72.88, 71.67] },
+  { id: 1, name: 'ALICE', isPinned: false, values: [100.00, 66.67, 66.67, 100.00, null, 100.00, 100.00, 100.00, 100.00, 100.00, 100.00, 100.00] },
+  { id: 2, name: 'DEOLINDO', isPinned: false, values: [0.00, 0.00, null, null, null, null, null, 100.00, 100.00, 100.00, null, 50.00] },
+  { id: 3, name: 'EDSON', isPinned: false, values: [50.00, 50.00, 100.00, 100.00, 100.00, 100.00, 50.00, 0.00, 33.33, 42.86, 66.67, 40.00] },
+  { id: 4, name: 'ERNANI', isPinned: false, values: [100.00, 100.00, 100.00, 100.00, 66.67, 50.00, 66.67, 100.00, 100.00, 50.00, 66.67, 50.00] },
+  { id: 5, name: 'HELANDE', isPinned: false, values: [null, null, null, null, null, 100.00, 100.00, 100.00, null, 100.00, 50.00, 100.00] },
+  { id: 6, name: 'ILZO', isPinned: false, values: [100.00, 100.00, 100.00, null, 100.00, 100.00, 100.00, 100.00, 100.00, null, 100.00, 100.00] },
+  { id: 7, name: 'JAMIL', isPinned: false, values: [100.00, null, 50.00, 50.00, null, 100.00, 100.00, 100.00, 100.00, 100.00, 100.00, 100.00] },
+  { id: 8, name: 'JBC', isPinned: false, values: [0.00, 16.67, 20.00, 25.00, 25.00, 33.33, 50.00, 50.00, 100.00, 100.00, 100.00, 100.00] },
+  { id: 9, name: 'CIRAUDO', isPinned: false, values: [28.57, 28.57, 14.29, 0.00, 0.00, null, 50.00, 60.00, 50.00, 60.00, 50.00, 100.00] },
+  { id: 10, name: 'LENICE', isPinned: false, values: [100.00, 66.67, 0.00, 50.00, 50.00, 50.00, null, null, 100.00, 100.00, 100.00, 50.00] },
+  { id: 11, name: 'LOURENCO', isPinned: false, values: [null, null, null, null, 100.00, 100.00, 100.00, 0.00, 50.00, 66.67, 50.00, 50.00] },
+  { id: 12, name: 'SAMUEL', isPinned: false, values: [33.33, 33.33, 0.00, 50.00, 100.00, 100.00, 0.00, 0.00, 0.00, 0.00, null, null] },
+  { id: 13, name: 'SERGIO AROUCA', isPinned: false, values: [66.67, 80.00, 100.00, 75.00, 0.00, 66.67, 100.00, 80.00, 66.67, 66.67, null, null] },
+  { id: 14, name: 'VALERIA', isPinned: false, values: [100.00, 50.00, 50.00, 100.00, 100.00, 100.00, 100.00, 100.00, 75.00, 66.67, 50.00, 100.00] },
+  { id: 15, name: 'WALDEMAR', isPinned: false, values: [50.00, 80.00, 66.67, 66.67, 33.33, 40.00, 0.00, 0.00, 0.00, null, 100.00, 50.00] },
+  { id: 16, name: 'ADELINO', isPinned: false, values: [null, null, 0.00, 0.00, 33.33, 66.67, 85.71, 100.00, 100.00, 100.00, 100.00, 100.00] },
+  { id: 17, name: 'ALOYSIO', isPinned: false, values: [100.00, 100.00, null, 0.00, 0.00, 0.00, null, null, null, 0.00, 50.00, 50.00] },
+  { id: 18, name: 'CATTAPRETA', isPinned: false, values: [100.00, 100.00, 100.00, null, null, null, null, null, null, 100.00, 50.00, 50.00] },
+  { id: 20, name: 'CYRO', isPinned: false, values: [null, 50.00, 50.00, 50.00, 100.00, 100.00, 100.00, null, 50.00, 75.00, 60.00, 40.00] },
+  { id: 19, name: 'CESARIO', isPinned: false, values: [20.00, 0.00, 33.33, 40.00, 33.33, 25.00, 50.00, 66.67, 75.00, 80.00, 57.14, 66.67] },
+  { id: 21, name: 'DECIO', isPinned: false, values: [100.00, 100.00, 100.00, null, null, null, null, null, 50.00, 50.00, 33.33, 0.00] },
+  { id: 22, name: 'EMYDIO', isPinned: false, values: [33.33, 100.00, 33.33, 60.00, 66.67, 80.00, 66.67, 66.67, 75.00, 33.33, 50.00, 75.00] },
+  { id: 23, name: 'FLORIPES', isPinned: false, values: [100.00, 66.67, 100.00, 100.00, 100.00, 100.00, 100.00, null, null, null, 100.00, 100.00] },
+  { id: 24, name: 'MARIA APARECIDA', isPinned: false, values: [100.00, 100.00, 100.00, 100.00, 100.00, 100.00, 100.00, null, null, null, null, null] },
+  { id: 25, name: 'SAVIO', isPinned: false, values: [0.00, 66.67, 57.14, 66.67, 0.00, null, null, 50.00, 33.33, 33.33, 50.00, 100.00] }
+];
+
 export const INDICATORS: Indicator[] = [
   {
     id: 'monitoring',
@@ -306,14 +393,34 @@ export const INDICATORS: Indicator[] = [
     data: DATA_1_5
   },
   {
+    id: 'indicator-6.2',
+    number: '6.2',
+    label: '6.2 - PROPORÇÃO DE IDOSOS CADASTRADOS COM REGISTRO DE AVALIAÇÃO MULTIDIMENSIONAL',
+    periodicidade: 'MENSAL',
+    meta: '50%',
+    fonte: 'PEP',
+    criterio: 'Média aritmética simples dos resultados mensais acumulados no ano de 2025 (Janeiro a Dezembro de 2025).',
+    data: DATA_6_2
+  },
+  {
+    id: 'indicator-4.6',
+    number: '4.6',
+    label: '4.6 - PERCENTUAL DE PACIENTES COM TB AVALIADOS PELA EQUIPE DE SAÚDE BUCAL NA ALTA POR CURA',
+    periodicidade: 'MENSAL',
+    meta: '80%',
+    fonte: 'PEP',
+    criterio: 'Média aritmética simples dos resultados mensais acumulados no ano de 2025 (Janeiro a Dezembro de 2025).',
+    data: DATA_4_6
+  },
+  {
     id: 'indicator-4.5',
     number: '4.5',
     label: '4.5 - PROPORÇÃO DE PACIENTES TABAGISTAS QUE PASSARAM POR ATENDIMENTO ODONTOLÓGICO INDIVIDUAL, GRUPO OU ATIVIDADE COLETIVA NOS ÚLTIMOS 12 MESES',
     periodicidade: 'MENSAL',
-    meta: '80,00%',
-    fonte: 'PEP',
+    meta: '70,00%',
+    fonte: '(PEP) UAP / Plataforma SUBPAV',
     criterio: 'Média aritmética simples dos resultados mensais acumulados no ano de 2025 (Janeiro a Dezembro de 2025).',
-    data: DATA_1_5
+    data: DATA_4_5
   },
   {
     id: 'indicator-4.3',
